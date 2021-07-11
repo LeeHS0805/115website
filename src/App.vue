@@ -11,14 +11,15 @@ export default {
 </script>
 
 <style>
-    *{
-        padding:0;
-        margin:0;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    a,a:link,a:visited,a:hover,a:active{
-        text-decoration: none;
-        color:inherit;
-    }
-    
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 </style>

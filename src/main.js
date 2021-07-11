@@ -10,7 +10,7 @@ import "animate.css"
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios;
-Vue.prototype.sleep = function(time) {
+Vue.prototype.sleep = function (time) {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve(time);
@@ -21,6 +21,7 @@ Vue.prototype.sleep = function(time) {
 //引入布局组件
 import navbar from './layout/navbar.vue';
 import bottombar from './layout/bottombar.vue';
+
 Vue.component('navbar', navbar);
 Vue.component('bottombar', bottombar);
 
@@ -28,6 +29,6 @@ new Vue({
     el: '#app',
     router,
     store,
-    components: { App },
+    components: {App},
     template: '<App/>'
 })
