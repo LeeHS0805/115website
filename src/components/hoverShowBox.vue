@@ -85,7 +85,7 @@ export default {
 <style lang='scss' scoped>
 .hoverShowBox {
   width: 100%;
-  margin: 44px 0;
+  margin: 44px 0 10px 0;
   overflow: hidden;
 
   > .row {

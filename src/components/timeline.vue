@@ -67,28 +67,28 @@ export default {
       showAnmLOut: false,
       itemsAll: [
         {
-          date: "2020-07",
-          title: "2020-07奖项",
-          content: ['标签1', '标签2', '标签3', '标签4', '标签3']
-        },
-        {
-          date: "2020-06",
-          title: "2020-06奖项",
-          content: ['标签3', '标签4']
-        },
-        {
-          date: "2020-05",
-          title: "2020-05奖项",
-          content: ['标签5', '标签6']
+          date: "2021-05",
+          title: "2021-05 奖项",
+          content: ['团队程序设计天梯赛 团队省级特等奖/个人国家级三等奖','第五届天津市大学生创客马拉松铜奖']
         },
         {
           date: "2020-04",
-          title: "2020-04奖项",
+          title: "2020-04 奖项",
+          content: ['蓝桥杯 国家一、二、三等奖', '多项市/校级大学生创新创业大赛项目']
+        },
+        {
+          date: "往期",
+          title: "2019-2020 奖项",
+          content: ['华北五省计算机应用大赛一、二、三等奖','第三届“蓝帽杯”全国大学生网络安全技能大赛一等奖', '大学生网络攻防大赛一等奖','全国大学生信息安全竞赛三等奖','...']
+        },
+        {
+          date: "2020-04",
+          title: "2020-04 奖项",
           content: ['标签7', '标签8']
         },
         {
           date: "2020-03",
-          title: "2020-03奖项",
+          title: "2020-03 奖项",
           content: ['标签9', '标签10']
         },
       ]
@@ -147,6 +147,7 @@ export default {
     },
     prev() {
       if (this.isLock) {
+        console.log(1)
       } else {
         this.isLock = true;
         if (this.selectedIndex != 0) {
@@ -225,7 +226,7 @@ export default {
 
 .showDetails {
   transition: 1.5s linear all;
-  padding: 80px 0;
+  padding: 40px 10px;
 
   > h1 {
     text-align: center;
@@ -234,7 +235,8 @@ export default {
 
   > p {
     text-align: center;
-    font-size: 20px;
+    font-size: 2.3vw;
+    padding-top: 10px;
     margin: 10px auto;
   }
 }
@@ -245,6 +247,7 @@ export default {
 
   > img {
     width: 100%;
+    height: 300px;
     opacity: 0.6;
     position: relative;
   }
@@ -253,17 +256,17 @@ export default {
     position: absolute;
     color: white;
     text-align: center;
-    top: 100px;
+    top: 80px;
     width: 100%;
   }
 
   > hr {
     color: #dbdbdb;
     background-color: #dbdbdb;
-    width: 760px;
+    width: 78vw;
     height: 5px;
     position: absolute;
-    top: 240px;
+    top: 220px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -276,13 +279,13 @@ export default {
     position: absolute;
     color: white;
     text-align: center;
-    top: 205px;
+    top: 185px;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
     margin: 0 auto;
-    width: 800px;
+    width: 80vw;
     height: 80px;
     align-items: center;
     justify-content: space-between;

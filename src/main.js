@@ -7,7 +7,7 @@ import "animate.css"
 // import swiper from 'vue-awesome-swiper'
 // import 'swiper/swiper-bundle.css'
 // Vue.use(swiper);
-
+import './assets/css/global.css'
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios;
 Vue.prototype.sleep = function (time) {

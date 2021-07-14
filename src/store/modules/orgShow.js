@@ -1,15 +1,15 @@
 const state = {
     hoverShowBoxDetails: {
         environment: {
-            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605544113845&di=9ba7680021e3a7a6ef8ef115074481c3&imgtype=0&src=http%3A%2F%2Fdown.51rc.com%2FImageFolder%2Foperational%2FEnvironment%2F2015%2F07%2F11%2F10398449_20150711111240598.jpg',
+            imgUrl: 'https://tva1.sinaimg.cn/large/008i3skNly1gsehbutnbrj31900u04at.jpg',
             content: '中心环境真嗯~ o(*￣▽￣*)o!'
         },
         resource: {
-            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605544138563&di=f2042ca4c1c2a7703331c9ca631396af&imgtype=0&src=http%3A%2F%2Fwww.chnihc.com.cn%2Fuploads%2Fallimg%2F161116%2F3-16111611154Q34.jpg',
+            imgUrl: 'https://tva1.sinaimg.cn/large/008i3skNly1gsehrpq1nlj30w00nex6p.jpg',
             content: '中心学习资源真顶d=====(￣▽￣*)b'
         },
         activity: {
-            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605544177100&di=bfc892bc2b1f50c24910e74367981d76&imgtype=0&src=http%3A%2F%2Fuploads.lnc.edu.cn%2F201204%2F2012042217243668.jpg',
+            imgUrl: 'https://tva1.sinaimg.cn/large/008i3skNly1gsehus654tj31ew0u0b2h.jpg',
             content: '中心团建活动真帮(๑•̀ㅂ•́)و✧'
         },
         communication: {
@@ -17,31 +17,61 @@ const state = {
             content: '中心交流真得劲O(∩_∩)O'
         },
         competition: {
-            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605544217765&di=d12f34cb5e2c36a973fae3eb043dcf99&imgtype=0&src=http%3A%2F%2Fi.gtimg.cn%2Fqqlive%2Fimg%2Fjpgcache%2Ffiles%2Fqqvideo%2Fhori%2Ft%2Ft8k04be2s6l7c2r.jpg',
+            imgUrl: 'https://tva1.sinaimg.cn/large/008i3skNly1gsehsowundj313z0u0x6v.jpg',
             content: '中心比赛真┗|｀O′|┛ 嗷~~力给'
         },
         smriti: {
-            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605544242912&di=3972e963808c965f6dd50a4a4e2578c8&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F66107db31aba05af4f2c8b8d545750e778f5b85715ed6-oyioLJ_fw658',
+            imgUrl: 'https://tva1.sinaimg.cn/large/008i3skNly1gsei0ezdukj31400u0he2.jpg',
             content: '中心传承真牛( ఠൠఠ )ﾉ'
         },
         birthday: {
-            imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605544263837&di=4067a757808f6e15e8274116b6a1fb38&imgtype=0&src=http%3A%2F%2Fdingyue.nosdn.127.net%2FmpPO6Wze6HmvSpdNprsOxxv8QdjXUTks12PwRtSXtXtpb1538200419723compressflag.jpg',
+            imgUrl: 'https://tva1.sinaimg.cn/large/008i3skNly1gsei6o64inj30z80nin5f.jpg',
             content: '中心生日真盛大♪(^∇^*)'
         }
-    }
+    },
+    directionIntro: [
+        {
+            en: 'Font-End',
+            cn: '前端',
+            intro:'前端组负责产品的前端实现，提供合理的前端架构。他们手握HTML、CSS、Javascript，将需求消化落实为具体的开发工作，生产出美观的UI、合理的交互界面。为用户提供人性化的体验是他们最高追求。'
+        },
+        {
+            en: 'Back-End',
+            cn: '后端',
+            intro: '后端组奔走于数据库、服务器、API之间，在用户看不见的地方辛勤耕耘。他们与前端进行数据交互及网站数据的保存和读取，力图完美实现底层业务逻辑并保证平台的稳定性与性能。'
+        },
+        {
+            en: 'Android',
+            cn: '安卓开发',
+            intro:'移动组根据需求文档设计稿进行功能设计、编码，实现参与项目技术方案的制定，负责开发Android移动端产品'
+        },
+        {
+            en: 'iOS',
+            cn: 'iOS开发',
+            intro:'iOS组根据需求文档设计稿进行功能设计、编码，实现参与项目技术方案的制定，负责开发iOS移动端产品'
+        },
+        {
+            en: 'Product',
+            cn: '产品',
+            intro:'产品组察觉生活中的潜在需求，抓住用户最真实的痛点，将奇思妙想落地成人人可使用的软件。小组负责产品上线后的推广宣传工作，让每个人看见我们的产品。此外，产品组还对已有产品进行多渠道运营，跟进用户反馈并分析数据，持续优化已有功能.'
+        },
+        {
+            en: 'Algorithm',
+            cn: '算法',
+            intro:'算法组的同学通过数据结构与算法解决各种学术和工业界问题，包括项目中后端算法接口的实现以及机器学习，人工智能等算法专业的研究。并将它们应用到实际项目中。'
+        },
+        {
+            en: 'Security',
+            cn: '安全',
+            intro:'安全组负责对信息和信息系统进行保护。防止未授权的访问使用线路中断，修改，破坏，并以此提供保密性，完整性和可用性.'
+        }]
 }
 
-const mutations = {
+const mutations = {}
 
-}
+const actions = {}
 
-const actions = {
-
-}
-
-const getters = {
-
-}
+const getters = {}
 
 export default {
     namespaces: true,
