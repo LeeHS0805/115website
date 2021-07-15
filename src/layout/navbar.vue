@@ -23,15 +23,36 @@
         <router-link to="/orgShow">组织展示</router-link>
       </a>
       <a>
-        <router-link to="/">关于我们</router-link>
-      </a>
-      <a>
-        <router-link to="/">加入我们</router-link>
+        <router-link to="/joinUs">加入我们</router-link>
       </a>
     </div>
     <div class="fit-phone">
       <span>SIPC</span>
-      <svg t="1626059395436" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1198" width="200" height="200"><path d="M896 0l128 0 0 128-128 0 0-128Z" p-id="1199" fill="#515151"></path><path d="M0 0l704 0 0 128-704 0 0-128Z" p-id="1200" fill="#515151"></path><path d="M896 448l128 0 0 128-128 0 0-128Z" p-id="1201" fill="#515151"></path><path d="M0 448l704 0 0 128-704 0 0-128Z" p-id="1202" fill="#515151"></path><path d="M896 896l128 0 0 128-128 0 0-128Z" p-id="1203" fill="#515151"></path><path d="M0 896l704 0 0 128-704 0 0-128Z" p-id="1204" fill="#515151"></path></svg>
+      <svg t="1626059395436" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+           p-id="1198" width="200" height="200" @click="changePhoneList">
+        <path d="M896 0l128 0 0 128-128 0 0-128Z" p-id="1199" fill="#515151"></path>
+        <path d="M0 0l704 0 0 128-704 0 0-128Z" p-id="1200" fill="#515151"></path>
+        <path d="M896 448l128 0 0 128-128 0 0-128Z" p-id="1201" fill="#515151"></path>
+        <path d="M0 448l704 0 0 128-704 0 0-128Z" p-id="1202" fill="#515151"></path>
+        <path d="M896 896l128 0 0 128-128 0 0-128Z" p-id="1203" fill="#515151"></path>
+        <path d="M0 896l704 0 0 128-704 0 0-128Z" p-id="1204" fill="#515151"></path>
+      </svg>
+      <div class="fit-phone-mask" @touchmove.prevent @mousewheel.prevent :class="{'phone-list_hide':showPhoneList}">
+        <div class="phone-list">
+          <div @click="changePhoneList">
+            <router-link to="/" tag="div">关于我们</router-link>
+          </div>
+          <div @click="changePhoneList">
+            <router-link to="/" tag="div">产品展示</router-link>
+          </div>
+          <div @click="changePhoneList">
+            <router-link to="/orgShow" tag="div">组织展示</router-link>
+          </div>
+          <div @click="changePhoneList">
+            <router-link to="/joinUs" tag="div">加入我们</router-link>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -49,7 +70,8 @@ export default {
     return {
       logo: logo,
       changeStyle: false,
-      isUp: true
+      isUp: true,
+      showPhoneList: true
     }
   },
   computed: {},
@@ -77,6 +99,9 @@ export default {
           this.isUp = e.detail >= 0;
         }
       }
+    },
+    changePhoneList(){
+      this.showPhoneList=!this.showPhoneList
     }
   },
   created() {
@@ -99,6 +124,18 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.phone-list_hide{
+  max-height: 0!important;
+  transition: max-height .3s ease-in-out;
+  padding: 10px 10px 0px 0!important;
+  .phone-list{
+    div{
+      display: none!important;
+      transition: .1s all ease-in-out;
+      opacity: 0;
+    }
+  }
+}
 @media (max-width: 600px) {
   .list {
     display: none !important;
@@ -124,17 +161,57 @@ export default {
       color: rgba(59, 59, 59, 0.9);
     }
 
-    svg{
+    svg {
       width: 18px;
       position: absolute;
       right: 0;
       margin-top: 3px;
       height: 18px;
     }
+
+    .fit-phone-mask {
+      position: absolute;
+      top: 50px;
+      padding: 10px 10px 230px 0;
+      width: 105vw;
+      height: 900px;
+      transition: max-height .2s ease-in-out;
+      max-height: 900px;
+      background-color: rgba(255, 255, 255, .95);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .phone-list {
+        width: 70%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        > div {
+          width: 100%;
+          height: 30px;
+          margin: 20px auto;
+          letter-spacing: 4px;
+          text-indent: -1px;
+          padding-bottom: 12px;
+          font-size: 17px;
+          color: rgba(50, 50, 50, 0.95);
+          font-family: "Microsoft Yahei";
+          border-bottom: 1px solid #dbdbdb;;
+          transition: 1s all ease-in-out;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
+
 @media (min-width: 600px) {
-  .fit-phone{
+  .fit-phone {
     display: none;
   }
 
