@@ -10,7 +10,8 @@
       <directionIntro></directionIntro>
     </section>
     <section class="member">
-      <h1 class="title title-3">成员简介</h1>
+      <h1 class="title title-3">2021中心权委</h1>
+      <mangerIntro></mangerIntro>
     </section>
   </div>
 </template>
@@ -18,9 +19,10 @@
 <script>
 import hoverShowBox from "@/components/hoverShowBox.vue"
 import directionIntro from "../../components/directionIntro";
+import mangerIntro from "../../components/mangerIntro";
 
 export default {
-  components: {hoverShowBox,directionIntro},
+  components: {hoverShowBox,directionIntro,mangerIntro},
   props: {},
   data() {
     return {}
@@ -49,8 +51,8 @@ export default {
 
   section {
     padding: 20px 0;
-    margin-top: 20px;
-    margin-bottom: -10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .title {
@@ -69,6 +71,12 @@ export default {
     color:#2a2e2e;
     font-size: 30px;
     letter-spacing: 2px;
+  }
+}
+.member{
+  background-color: #fff;
+  .title{
+    padding: 30px 0 10px 0;
   }
 }
 </style>
