@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="https://www.tencent.com/font/TencentSans-W7.woff" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <% for(var css of htmlWebpackPlugin.options.cdn.css) { %>
+    <link rel="stylesheet" href="<%=css%>" />
+    <% } %>
 </head>
 <body>
+<% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
+<script src="<%=js%>"></script>
+<% } %>
 <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
